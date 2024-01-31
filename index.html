@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Praneeth Bulusu Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Praneeth Bulusu</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img " style="background-image:url(images/bg_1.png);width: 40%;">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I am <span>Praneeth Bulusu</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Student  ',
+						'Programmer  ',
+						'Web Developing Enthusiast   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Engineer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/praneeth-bulusu-450b3a248/" class="btn btn-primary py-3 px-4">linkedin</a> 
+							<a href="https://github.com/Praneeth-9904" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/bg_2.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Praneeth Bulusu</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Student</span></p>
+										<p><span class="title-s">Graduation: </span> <span>Pursuing 2nd year</span></p>
+										<p><span class="title-s">Address: </span> <span>Mandapeta, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>C</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>C++</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Structures</span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Web Development</span> <span class="pull-right">60%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Confident Student passionate about learning new
+									skills. Ambitious and driven individual ready and willing
+									to work hard and learn from professionals. Brings
+									outstanding computer and communication skills.
+									</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Computer science &amp; AIML</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Telugu</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Problem-Solving, Communication</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Cricket, Reading Books</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="3">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<br>
+								<br>
+								<br>
+								<p><a href="https://unstop.com/u/praneeth09" class="btn btn-primary py-3 px-3">Unstop</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>My career objective is to gain practical
+				experience in the corporate world and
+				leverage my academic background in
+				Artificial Intelligence & Machine Learning. Eager to learn new technologies and best
+				practices that will help me adapt to
+				emerging trends in the field, and
+				committed to utilize my potential to the
+				fullest.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">2022-Present</span>
+						<h2>Student</h2>
+						<span class="position">SRM UNIVERSITY AP</span>
+						<p class="mt-4">The university was established in 2017 by the SRM Trust through the Andhra Pradesh Private Universities. 
+							<ul>
+								<li>. Solving problems With Neocolab (SRM University AP)</li>
+								<li>Solved more than 80 problems in Campus Corporate Connect (CCC)
+									platform using Data Structure.</li>
+								<li>Gaining great knowledge by working on own
+                                  projects.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"></span>
+						<h2></h2>
+						<span class="position"></span>
+						<p class="mt-4"> 
+							
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2022</span>
+    					<h2>Intermediate</h2>
+    					<span class="position">Sri Chaitanya Jr College, Vijayawada</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2019-2020</span>
+    					<h2>Secondary School</h2>
+    					<span class="position">Bhashyam EM School, Kakinada</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="C:\Users\prane\OneDrive\Desktop\PRANEETH BVSS - Resume.pdf" class="btn btn-primary py-4 px-5" target="_blank">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the projects we have done in c,c++ Lnaguages</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Praneeth-9904/Implementation-of-dijkstra-s-algorithm" class="block-20 zoom-effect" style="background-image: url('https://static.javatpoint.com/tutorial/daa/images/dijkstras-algorithm6.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Praneeth-9904/Implementation-of-dijkstra-s-algorithm">Implementation-of-dijkstra-s-algorithm</a></h3>
+                <p>This is a basic project to show the implementation of dijkstra's algorithm from the topic data structures.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Praneeth-9904/Memory-Optimisation-Of-SmartPhones" class="block-20 zoom-effect" style="background-image: url('data:image/jpeg;base64,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');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Praneeth-9904/Memory-Optimisation-Of-SmartPhones">Memory-Optimisation-Of-SmartPhones</a></h3>
+                <p>This is a Basic project to show the Memory Optimisation over the Smart phones using the Principles of C++</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Praneeth-9904/Restaurant-bill-in-C" class="block-20 zoom-effect" style="background-image: url('data:image/jpeg;base64,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');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Praneeth-9904/Restaurant-bill-in-C">Restaurant-bill-in-C</a></h3>
+                <p>This is a basic project to show the restaurant bill calculation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rishabhnmishra/sales_forecasting/tree/main" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				
+				<div class="text mt-3 float-right d-block">
+				  
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="4">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1">0</strong>
+                <span>Tech Club</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="600">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/Praneeth-9904" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Mandapeta, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 8008425995</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vssrisaipraneeth_bulusu@srmap.edu.in</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="C:\Users\prane\OneDrive\Desktop\PRANEETH BVSS - Resume.pdf">resumelink</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href=""><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/praneeth-bulusu-450b3a248/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href=""><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.facebook.com/praneeth.bulusu.5"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/praneeth_bulusu/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	&copy;<script>document.write(new Date().getFullYear());</script><i aria-hidden="true"></i> <a href=""></a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
